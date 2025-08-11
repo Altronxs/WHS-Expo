@@ -33,10 +33,29 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "fonts": [
+      {
+        "asset": "./assets/fonts/impact.ttf",
+        "name": "Impact"
+      },
+      {
+        "asset": "./assets/fonts/Roboto-Regular.ttf",
+        "name": "Roboto-Regular"
+      },
+      {
+        "asset": "./assets/fonts/Roboto-SemiBold.ttf",
+        "name": "Roboto-SemiBold"
+      },
+      {
+        "asset": "./assets/fonts/Roboto-Italic.ttf",
+        "name": "Roboto-Italic"
+      }
+    ]
   }
 }
