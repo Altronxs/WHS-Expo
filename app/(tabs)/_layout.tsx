@@ -11,16 +11,17 @@ const _Layout = () => {
                 name="guide"
                 options={{
                     title: 'Guide',
+                    tabBarActiveTintColor: '#ae8c52',
                     headerShown: false,
                     tabBarLabel: ({ focused }) => (
-                        <Text className='color-white font-roboto-bold text-xs'>Guide</Text>
+                        <Text className='hidden'></Text>
                     ),
                     tabBarStyle: {
                         backgroundColor: '#0d0d59',
                     },
                     tabBarIcon: ({ focused }) => (
                         <> 
-                            <Image source={require('@/assets/images/info.png')} tintColor={'#ffffff'}/>    
+                            <Image source={require('@/assets/images/whs-info.png')} tintColor={focused ? '#ae8c52' : '#ffffff'} className='size-8 mt-6'/>    
                         </>
                     )
                 }}
@@ -29,17 +30,19 @@ const _Layout = () => {
                 name="index"
                 options={{
                     title: 'Home',
+                    tabBarActiveTintColor: '#ae8c52',
                     headerShown: false,
                     tabBarLabel: ({ focused }) => (
-                        <Text className='hidden'>Home</Text>
+                        <Text className='hidden'></Text>
                     ),
                     tabBarStyle: {
                         backgroundColor: '#0d0d59',
                     },
                     tabBarIcon: ({ focused }) => (
                         <> 
-                        
-                            <ImageBackground source={require('@/assets/images/home.png')} className='size-32 border-4 rounded-full'></ImageBackground>
+                            <Image source={require('@/assets/images/whs-home.png')} tintColor={focused ? '#ae8c52' : '#ffffff'} className='size-8 mt-6'/>    
+                            
+                            {/**<ImageBackground source={require('@/assets/images/home.png')} className='size-28 border-4 rounded-full border-whs-gold mb-5'></ImageBackground>**/}
                         </>
                     )
                 }}
@@ -48,16 +51,17 @@ const _Layout = () => {
                 name="map"
                 options={{
                     title: 'Campus',
+                    tabBarActiveTintColor: '#ae8c52',
                     headerShown: false,
                     tabBarLabel: ({ focused }) => (
-                        <Text className='color-white font-roboto-bold text-xs'>Map</Text>
+                        <Text className='hidden'></Text>
                     ),
                     tabBarStyle: {
                         backgroundColor: '#0d0d59',
                     },
                     tabBarIcon: ({ focused }) => (
                         <> 
-                            <Image source={require('@/assets/images/map.png')} tintColor={'#ffffff'}/>    
+                            <Image source={require('@/assets/images/whs-map.png')} tintColor={ focused ? '#ae8c52' : '#ffffff'} className='size-8 mt-6'/>    
                         </>
                     )
                 }}

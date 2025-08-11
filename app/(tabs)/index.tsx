@@ -42,8 +42,7 @@ export default function Index() {
       </SafeAreaView>
 
       <SafeAreaView className="grow  justify-center items-center bg-white">
-        <Text className="text-5xl text-blue-500 font-bold font-roboto-italic ">WAIPAHU</Text>
-        <Link href="/map">map</Link>
+        
       </SafeAreaView>
       
     </SafeAreaProvider>
