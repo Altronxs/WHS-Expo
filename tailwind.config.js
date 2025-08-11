@@ -13,6 +13,10 @@ module.exports = {
         "roboto-bold": ["Roboto_700Bold", ...fontFamily.sans],
         "roboto-italic": ["Roboto-Italic", "sans-serif"],
       },
+      colors: {
+        'whs-gold': "#ae8c52",
+        'whs-blue': "#0d0d59"
+      }
     },
   },
   plugins: [],

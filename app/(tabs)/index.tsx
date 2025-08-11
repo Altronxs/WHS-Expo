@@ -29,7 +29,7 @@ export default function Index() {
           />
         </TouchableOpacity>
       </SafeAreaView> */}
-      <SafeAreaView className="flex-row bg-blue-950 h-28 z-10 pt-28">
+      <SafeAreaView className="flex-row bg-[#0d0d59] h-28 z-10 pt-28">
         <Image
           source={require("@/assets/images/whs-logo.png")}
           className="w-32 h-32 relative bottom-28 left-11"
@@ -39,12 +39,13 @@ export default function Index() {
           <Text className="text-white font-roboto-bold">     MY CHOICE</Text>
           <Text className="text-white font-roboto-bold">           MY FUTURE</Text>
         </SafeAreaView>
-
       </SafeAreaView>
+
       <SafeAreaView className="grow  justify-center items-center bg-white">
         <Text className="text-5xl text-blue-500 font-bold font-roboto-italic ">WAIPAHU</Text>
         <Link href="/map">map</Link>
       </SafeAreaView>
+      
     </SafeAreaProvider>
     
   );
