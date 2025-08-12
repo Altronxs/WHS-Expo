@@ -6,7 +6,14 @@ import { Tabs } from 'expo-router'
 const _Layout = () => {
 
     return (
-        <Tabs>
+        <Tabs
+            screenOptions={{
+                tabBarStyle: {
+                    backgroundColor: '#0d0d59',
+                }
+            }}
+
+        >
             <Tabs.Screen
                 name="guide"
                 options={{
@@ -64,6 +71,15 @@ const _Layout = () => {
                             <Image source={require('@/assets/images/whs-map.png')} tintColor={ focused ? '#ae8c52' : '#ffffff'} className='size-8 mt-6'/>    
                         </>
                     )
+                }}
+            />
+            <Tabs.Screen
+                name="cafe"
+                options={{
+                    title: 'Cafe',
+                    href: null, // hides from tab bar
+                    headerShown: false,
+                    
                 }}
             />
         </Tabs>
