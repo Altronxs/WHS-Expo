@@ -17,7 +17,7 @@ const Cafe = () => {
 
   return (
     <SafeAreaProvider className="flex-col">
-      {/* <SafeAreaView className="flex-row bg-[#0d0d59] h-28 z-10 pt-28">
+      <SafeAreaView className="flex-row bg-[#0d0d59] h-28 z-10 pt-28">
         <Image
           source={require("@/assets/images/whs-logo.png")}
           className="w-32 h-32 relative bottom-28 left-11"
@@ -27,7 +27,7 @@ const Cafe = () => {
           <Text className="text-white font-roboto-bold">     MY CHOICE</Text>
           <Text className="text-white font-roboto-bold">           MY FUTURE</Text>
         </SafeAreaView>
-      </SafeAreaView> */}
+      </SafeAreaView> 
 
       <View className="grow justify-center items-center bg-white">
         <ScrollView className="self-center">
