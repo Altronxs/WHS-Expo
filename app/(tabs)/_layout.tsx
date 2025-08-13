@@ -75,11 +75,13 @@ const _Layout = () => {
             />
             <Tabs.Screen
                 name="cafe"
+                
                 options={{
                     title: 'Cafe',
                     href: null, // hides from tab bar
                     headerShown: false,
                     
+
                 }}
             />
         </Tabs>
