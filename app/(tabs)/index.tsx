@@ -75,7 +75,7 @@ export default function Index() {
 
 
 
-            <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center">
+            <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center" onPress={() => router.push("/contacts")}>
               <Image 
                 source={require('@/assets/images/phone.png')} 
                 style={{

@@ -84,6 +84,17 @@ const _Layout = () => {
 
                 }}
             />
+            <Tabs.Screen
+                name="contacts"
+                
+                options={{
+                    title: 'Contacts',
+                    href: null, // hides from tab bar
+                    headerShown: false,
+                    
+
+                }}
+            />
         </Tabs>
     )
 }

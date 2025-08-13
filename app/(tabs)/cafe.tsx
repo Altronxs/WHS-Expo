@@ -1,3 +1,4 @@
+
 import { Text, Image, View, ScrollView, ImageBackground, ActivityIndicator } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { useFocusEffect } from 'expo-router';
