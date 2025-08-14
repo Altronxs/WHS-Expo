@@ -4,6 +4,8 @@ import {
   Image,
   View,
   ActivityIndicator,
+  Button,
+  TouchableOpacity,
 } from 'react-native';
 import {
   SafeAreaView,
@@ -30,6 +32,17 @@ const Contacts = () => {
         }, [])
     );
 
+    const [canGoBack, setCanGoBack] = useState(false);
+
+    useFocusEffect(
+      React.useCallback(() => {
+        if (webViewRef.current?.reload) {
+          webViewRef.current.reload();
+        }
+      }, [])
+    );
+
+
 
     let [fontsLoaded] = useFonts({
         Roboto_400Regular,
@@ -54,9 +67,27 @@ const Contacts = () => {
           <Text className="text-white font-roboto-bold">           MY FUTURE</Text>
         </SafeAreaView>
       </SafeAreaView>
-
+      
+      {canGoBack && (
+        <View className='bg-whs-gold w-[100vw] h-[8vh] flex-row'>
+          <TouchableOpacity 
+            className="w-10 h-10  justify-center p-6"
+            onPress={() => webViewRef.current?.goBack()}
+          >
+            <Image 
+              source={require('@/assets/images/back.png')} 
+              style={{
+                tintColor: '#0d0d59'
+              }} 
+              className="size-10 self-center"
+            />
+            
+          </TouchableOpacity>
+          <Text className='text-whs-blue z-40 font-roboto-regular mt-3 right-2'>Back</Text>
+        </View>
+        )}
+      
       <View className="grow justify-center items-center bg-white">
-        
         <View className="self-center items-center flex-row w-[100vw] h-[100vh] z-10">
           <WebView
             className='h-[50vh]'
@@ -81,7 +112,14 @@ const Contacts = () => {
             onMessage={(event) => {
                 console.log("WebView message:", event.nativeEvent.data);
             }}
+
+            onNavigationStateChange={(navState) => {
+              setCanGoBack(navState.canGoBack);
+            }}
+            sharedCookiesEnabled={true}
+            thirdPartyCookiesEnabled={true}
             />
+
         </View>
       </View>
     </SafeAreaProvider>
