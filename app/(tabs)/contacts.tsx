@@ -56,9 +56,7 @@ const Contacts = () => {
       </SafeAreaView>
 
       <View className="grow justify-center items-center bg-white">
-        <Text className="z-20 font-roboto text-white pt-16 pb-4 w-[100vw] bg-whs-gold text-center">
-          Breakfast & Lunch Menu
-        </Text>
+        
         <View className="self-center items-center flex-row w-[100vw] h-[100vh] z-10">
           <WebView
             className='h-[50vh]'
