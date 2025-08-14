@@ -41,3 +41,12 @@ git clone https://github.com/Altronxs/WHS-Expo.git
 cd WHS-Expo
 npm install
 npx expo start
+```
+👥 Original Authors
+This project was proudly initiated and developed by:
+- Layten Fernandez
+- Lander Jarvis Viernes
+- Justine John Claro
+- Ian Ramos
+- Carl Nelson David
+
