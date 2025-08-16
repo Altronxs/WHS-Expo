@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "WHS",
-    "slug": "WHS",
+    "slug": "whs",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -56,6 +56,13 @@
         "asset": "./assets/fonts/Roboto-Italic.ttf",
         "name": "Roboto-Italic"
       }
-    ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "76eacce6-23be-400e-81f1-ee2ae50c5ec3"
+      }
+    },
+    "owner": "altronx"
   }
 }
