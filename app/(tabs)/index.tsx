@@ -50,7 +50,7 @@ export default function Index() {
               />
               <Text className="text-center font-roboto-regular text-[#0d0d59] text-xs">Mission & Vision</Text>
             </TouchableOpacity>
-            <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center pt-10">
+            <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center pt-10" onPress={() => router.push("/bell")}>
               <Image 
                 source={require('@/assets/images/bell.png')} 
                 style={{

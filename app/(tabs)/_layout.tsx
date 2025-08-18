@@ -95,6 +95,17 @@ const _Layout = () => {
 
                 }}
             />
+            <Tabs.Screen
+                name="bell"
+                
+                options={{
+                    title: 'Bell',
+                    href: null, // hides from tab bar
+                    headerShown: false,
+                    
+
+                }}
+            />
         </Tabs>
     )
 }
