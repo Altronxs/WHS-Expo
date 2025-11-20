@@ -106,6 +106,17 @@ const _Layout = () => {
 
                 }}
             />
+            <Tabs.Screen
+                name="calender"
+                
+                options={{
+                    title: 'Calender',
+                    href: null, // hides from tab bar
+                    headerShown: false,
+                    
+
+                }}
+            />
         </Tabs>
     )
 }

@@ -16,7 +16,6 @@ export default function Index() {
   }
 
   return (
-    
     <SafeAreaProvider className="flex-col">
       <SafeAreaView className="flex-row bg-[#0d0d59] h-28 z-10 pt-28">
         <Image
@@ -36,10 +35,8 @@ export default function Index() {
             className="flex-row flex-wrap justify-center items-start w-[100vw] h-[100vh]"
           >
             
-            
             <TouchableOpacity 
               className="w-24 h-min mx-3 my-3 justify-center pt-10"
-              
             >
               <Image 
                 source={require('@/assets/images/school.png')} 
@@ -60,7 +57,7 @@ export default function Index() {
               />
               <Text className="text-center font-roboto-regular text-[#0d0d59] text-xs">Bell Schedule</Text>
             </TouchableOpacity>
-            <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center pt-10">
+            <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center pt-10" onPress={() => router.push("/map")}>
               <Image 
                 source={require('@/assets/images/map-icon.png')} 
                 style={{
@@ -152,13 +149,28 @@ export default function Index() {
               />
               <Text className="text-center font-roboto-regular text-[#0d0d59] text-xs">Cafeteria</Text>
             </TouchableOpacity>
-      
+
+
+
+
+
+            <TouchableOpacity 
+              className="w-24 h-min mx-3 my-3 justify-center"
+              onPress={() => router.push("/calender")}
+            >
+              <Image 
+                source={require('@/assets/images/calender.png')} 
+                style={{
+                  tintColor: '#0d0d59'
+                }} 
+                className="size-14 self-center"
+              />
+              <Text className="text-center font-roboto-regular text-[#0d0d59] text-xs">Calendar</Text>
+            </TouchableOpacity>
           </ImageBackground>   
           
         </ScrollView>
       </View>
     </SafeAreaProvider>
-    
-    
   );
 }

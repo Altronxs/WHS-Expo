@@ -1,19 +1,18 @@
-
-import { Text, Image, View, ScrollView, ImageBackground, ActivityIndicator } from "react-native";
+import { Text, Image, View, ScrollView, ImageBackground, ActivityIndicator, Dimensions, TouchableOpacity } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { useFocusEffect } from 'expo-router';
-import { useFonts } from '@expo-google-fonts/roboto/useFonts';
-import { Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
+import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
 import React, { useState, useEffect, useRef } from 'react';
+import { Link, useRouter } from "expo-router";
+import { WebView } from "react-native-webview";
+import type { WebView as WebViewType } from "react-native-webview";
 
-import { WebView } from 'react-native-webview';
-import type { WebView as WebViewType } from 'react-native-webview';
-
-
+const { width, height } = Dimensions.get('window');
 
 const Cafe = () => {
-
+  const [menuUrl, setMenuUrl] = useState<string>('');
   const webViewRef = useRef<WebViewType>(null);
+  const router = useRouter();
 
   useFocusEffect(
     React.useCallback(() => {
@@ -23,16 +22,34 @@ const Cafe = () => {
     }, [])
   );
 
-
   let [fontsLoaded] = useFonts({
     Roboto_400Regular,
     Roboto_700Bold,
   });
 
-  if (!fontsLoaded) {
-    return null; // Or a loading indicator
-  }
+  useEffect(() => {
+    const date = new Date();
+    const month = date.getMonth();
+    const year = date.getFullYear();
+    const monthNames = [
+      "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
+      "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"
+    ];
+    const formattedMonth = monthNames[month]; 
+    const pdfUrl = `https://www.waipahuhigh.org/menus/MONTHLY%20%20MENU%20${formattedMonth}-${year}.pdf`;
+    setMenuUrl(pdfUrl);
+  }, []);
 
+  if (!fontsLoaded || !menuUrl) {
+    return (
+      <SafeAreaProvider className="flex-1 justify-center items-center bg-white">
+        <SafeAreaView className="flex-row bg-[#0d0d59] h-28 z-30 pt-28 w-full">
+          <ActivityIndicator size="large" color="#0d0d59" />
+        </SafeAreaView>
+      </SafeAreaProvider>
+    );
+  }
+  
   return (
     <SafeAreaProvider className="flex-col">
       <SafeAreaView className="flex-row bg-[#0d0d59] h-28 z-30 pt-28">
@@ -46,17 +63,30 @@ const Cafe = () => {
           <Text className="text-white font-roboto-bold">           MY FUTURE</Text>
         </SafeAreaView>
       </SafeAreaView> 
-
-      <View className="grow justify-center items-center bg-white">
-        
+      
+      <View className="grow justify-center items-center bg-whs-gold">
+        <TouchableOpacity 
+          className="w-10 h-10 left self-start pt-4 z-30"
+          onPress={() => router.push("/")}
+        >
+          <Image 
+            source={require('@/assets/images/back.png')} 
+            style={{
+              tintColor: '#0d0d59'
+            }} 
+            className="size-10 self-center"
+          />
+        </TouchableOpacity>
         <Text
-          className="z-20 font-roboto text-white pt-16 pb-4 w-[100vw] bg-whs-gold text-center"
-        >Breakfast & Lunch Menu</Text>
-        <View className="self-center items-center flex-row w-[100vw] h-[100vh] z-10">
+          className="z-20 font-roboto text-white w-full bg-whs-gold text-center relative bottom-5"
+        >Breakfast & Lunch Menu
+        </Text>
+        <View className="self-center items-center flex-row w-full flex-1 z-10">
             <WebView
-              className="relative mt-[10vh]"
+              className="relative"
+              style={{ width: width, flex: 1 }}
               ref={webViewRef}
-              source={{ uri: 'https://www.waipahuhigh.org/pdf/MONTHLY%20MENU%20AUGUST-2025.pdf' }}
+              source={{ uri: menuUrl }}
             />
         </View>
       </View>
