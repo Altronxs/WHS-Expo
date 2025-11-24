@@ -103,7 +103,6 @@ const Contacts = () => {
                     }
                 \`;
                 document.head.appendChild(style);
-                window.ReactNativeWebView.postMessage("Style injected");
                 }, 1000);
                 true;
             `}
