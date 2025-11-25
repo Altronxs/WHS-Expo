@@ -118,7 +118,6 @@ const Contacts = () => {
             sharedCookiesEnabled={true}
             thirdPartyCookiesEnabled={true}
             />
-
         </View>
       </View>
     </SafeAreaProvider>
