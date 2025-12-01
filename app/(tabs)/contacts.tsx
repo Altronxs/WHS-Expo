@@ -12,11 +12,10 @@ import {
   SafeAreaProvider,
 } from 'react-native-safe-area-context';
 import { useFocusEffect } from 'expo-router';
-import { useFonts } from '@expo-google-fonts/roboto/useFonts';
+import { useFonts } from '@expo-google-fonts/barlow-semi-condensed/useFonts';
 import {
-  Roboto_400Regular,
-  Roboto_700Bold,
-} from '@expo-google-fonts/roboto';
+  BarlowSemiCondensed_600SemiBold,
+} from '@expo-google-fonts/barlow-semi-condensed';
 import { WebView } from 'react-native-webview';
 import type { WebView as WebViewType } from 'react-native-webview';
 
@@ -45,8 +44,7 @@ const Contacts = () => {
 
 
     let [fontsLoaded] = useFonts({
-        Roboto_400Regular,
-        Roboto_700Bold,
+        BarlowSemiCondensed_600SemiBold,
     });
 
     if (!fontsLoaded) {
@@ -62,9 +60,9 @@ const Contacts = () => {
           className="w-32 h-32 relative bottom-28 left-11"
         />
         <SafeAreaView className="w-48 h-28 bottom-36 left-14 items-start">
-          <Text className="text-white font-roboto-bold">MY VOICE</Text>
-          <Text className="text-white font-roboto-bold">     MY CHOICE</Text>
-          <Text className="text-white font-roboto-bold">           MY FUTURE</Text>
+            <Text className="text-white font-barlow-semibold">MY VOICE</Text>
+            <Text className="text-white font-barlow-semibold">          MY CHOICE</Text>
+            <Text className="text-white font-barlow-semibold">                    MY FUTURE</Text>
         </SafeAreaView>
       </SafeAreaView>
       
@@ -83,7 +81,7 @@ const Contacts = () => {
             />
             
           </TouchableOpacity>
-          <Text className='text-whs-blue z-40 font-roboto-regular mt-3 right-2'>Back</Text>
+            <Text className='text-whs-blue z-40 font-barlow-semibold mt-3 right-2'>Back</Text>
         </View>
         )}
       

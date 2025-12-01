@@ -1,7 +1,7 @@
 import { Text, Image, View, ScrollView, ImageBackground, ActivityIndicator, Dimensions, TouchableOpacity } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { useFocusEffect } from 'expo-router';
-import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
+import { useFonts, BarlowSemiCondensed_600SemiBold } from '@expo-google-fonts/barlow-semi-condensed';
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useRouter } from "expo-router";
 import { WebView } from "react-native-webview";
@@ -23,8 +23,7 @@ const Cafe = () => {
   );
 
   let [fontsLoaded] = useFonts({
-    Roboto_400Regular,
-    Roboto_700Bold,
+    BarlowSemiCondensed_600SemiBold,
   });
 
   useEffect(() => {
@@ -58,9 +57,9 @@ const Cafe = () => {
           className="w-32 h-32 relative bottom-28 left-11"
         />
         <SafeAreaView className="w-48 h-28 bottom-36 left-14 items-start">
-          <Text className="text-white font-roboto-bold">MY VOICE</Text>
-          <Text className="text-white font-roboto-bold">     MY CHOICE</Text>
-          <Text className="text-white font-roboto-bold">           MY FUTURE</Text>
+            <Text className="text-white font-barlow-semibold">MY VOICE</Text>
+            <Text className="text-white font-barlow-semibold">          MY CHOICE</Text>
+            <Text className="text-white font-barlow-semibold">                    MY FUTURE</Text>
         </SafeAreaView>
       </SafeAreaView> 
       
@@ -78,7 +77,7 @@ const Cafe = () => {
           />
         </TouchableOpacity>
         <Text
-          className="z-20 font-roboto text-white w-full bg-whs-gold text-center relative bottom-5"
+          className="z-20 font-barlow-semibold text-white w-full bg-whs-gold text-center relative bottom-5"
         >Breakfast & Lunch Menu
         </Text>
         <View className="self-center items-center flex-row w-full flex-1 z-10">

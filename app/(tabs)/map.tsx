@@ -1,7 +1,7 @@
 import { Text, Image, View, ScrollView, ImageBackground, ActivityIndicator, Dimensions, TouchableOpacity, StyleSheet } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { useFocusEffect } from 'expo-router';
-import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
+import { useFonts, BarlowSemiCondensed_600SemiBold } from '@expo-google-fonts/barlow-semi-condensed';
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useRouter } from "expo-router";
 import { WebView } from "react-native-webview";
@@ -22,8 +22,7 @@ const Map = () => {
     );
 
     let [fontsLoaded] = useFonts({
-        Roboto_400Regular,
-        Roboto_700Bold,
+        BarlowSemiCondensed_600SemiBold,
     });
 
     if (!fontsLoaded) {
@@ -38,9 +37,9 @@ const Map = () => {
                 className="w-32 h-32 relative bottom-28 left-11"
             />
             <SafeAreaView className="w-48 h-28 bottom-36 left-14 items-start">
-                <Text className="text-white font-roboto-bold">MY VOICE</Text>
-                <Text className="text-white font-roboto-bold">     MY CHOICE</Text>
-                <Text className="text-white font-roboto-bold">           MY FUTURE</Text>
+                <Text className="text-white font-barlow-semibold">MY VOICE</Text>
+                <Text className="text-white font-barlow-semibold">          MY CHOICE</Text>
+                <Text className="text-white font-barlow-semibold">                    MY FUTURE</Text>
             </SafeAreaView>
             </SafeAreaView> 
 
@@ -58,7 +57,7 @@ const Map = () => {
                     />
                 </TouchableOpacity>
                 <Text
-                    className="z-20 font-roboto-bold text-white w-full bg-whs-gold text-center relative bottom-5"
+                    className="z-20 font-barlow-semibold text-white w-full bg-whs-gold text-center relative bottom-5"
                 >Campus Map 2025-2026
                 </Text>
             </View>
@@ -66,7 +65,7 @@ const Map = () => {
                 className="bg-white w-[100vw] h-[75%] justify-center items-center "
             >
                 <ScrollView
-                    className="w-[100vw] h-96 bg-gray-200 pt-5 flex-1 flex-col"
+                    className="w-[100vw] h-96 bg-white pt-5 flex-1 flex-col"
                     style={{ height: height * 0.75 }}
                 >
                     
@@ -76,11 +75,11 @@ const Map = () => {
                         resizeMode="cover"
                     />
                     <Text
-                        className="z-30 font-roboto-bold text-black w-full bg-white text-center relative p-5"
+                        className="z-30 font-barlow-semibold text-whs-blue w-full bg-gray-100 text-center relative p-5"
                     >Northern Campus Map
                     </Text>
                     <View
-                        className="h-[35vh] w-[95vw] z-30 bg-gray-600 justify-center items-center self-center overflow-hidden pb-32 m-[2.5vw]"
+                        className="h-[35vh] w-[95vw] z-30 bg-white justify-center items-center self-center overflow-hidden pb-32 m-[2.5vw]"
                     >
                         <Image
                             source={require('@/assets/images/whs-campus-map.png')} 
@@ -88,11 +87,11 @@ const Map = () => {
                         />
                     </View>
                     <Text
-                        className="z-30 font-roboto-bold text-black w-full bg-white text-center relative p-5"
+                        className="z-30 font-barlow-semibold text-whs-blue w-full bg-gray-100 text-center relative p-5"
                     >Central Campus Map
                     </Text>
                     <View
-                        className="h-[35vh] w-[95vw] z-30 bg-gray-600 justify-center items-center self-center overflow-hidden pb-32 m-[2.5vw]"
+                        className="h-[35vh] w-[95vw] z-30 bg-white justify-center items-center self-center overflow-hidden pb-32 m-[2.5vw]"
                     >
                         <Image
                             source={require('@/assets/images/whs-campus-map.png')} 
@@ -100,7 +99,7 @@ const Map = () => {
                         />
                     </View>
                     <Text
-                        className="z-30 font-roboto-bold text-black w-full bg-white text-center relative p-5"
+                        className="z-30 font-barlow-semibold text-whs-blue w-full bg-gray-100 text-center relative p-5"
                     >Southern Campus Map
                     </Text>
                     <View

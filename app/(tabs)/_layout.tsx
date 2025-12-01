@@ -117,6 +117,17 @@ const _Layout = () => {
 
                 }}
             />
+            <Tabs.Screen
+                name="vision"
+                
+                options={{
+                    title: 'Vision',
+                    href: null, // hides from tab bar
+                    headerShown: false,
+                    
+
+                }}
+            />
         </Tabs>
     )
 }
