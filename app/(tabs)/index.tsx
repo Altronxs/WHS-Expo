@@ -1,4 +1,4 @@
-import { Text, Button, Alert, Image, TouchableOpacity, View, ScrollView, ImageBackground, Linking } from "react-native";
+import { Text, Button, Alert, Image, TouchableOpacity, View, ScrollView, ImageBackground, Linking, ActivityIndicator } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { Link, useRouter } from "expo-router";
 import { useFonts } from '@expo-google-fonts/barlow-semi-condensed/useFonts';
@@ -11,7 +11,13 @@ export default function Index() {
   });
 
   if (!fontsLoaded) {
-    return null; // Or a loading indicator
+    return (
+      <SafeAreaProvider className="flex-1 justify-center items-center bg-white">
+        <SafeAreaView className="flex-row bg-[#0d0d59] h-28 z-30 pt-28 w-full">
+          <ActivityIndicator size="large" color="#0d0d59" />
+        </SafeAreaView>
+      </SafeAreaProvider>
+    );
   }
 
   return (
@@ -33,8 +39,11 @@ export default function Index() {
             source={require('@/assets/images/bg-home.png')} 
             className="flex-row flex-wrap justify-center items-start w-[100vw] h-[100vh]"
           >
-            
-            <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center pt-10" onPress={() => router.push("/vision")}>
+            <Text
+                className="z-20 font-barlow-semibold text-2xl text-whs-blue w-full text-center p-5 pb-0"
+            >WELCOME!
+                                    </Text>
+            <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center pt-5" onPress={() => router.push("/vision")}>
               <Image 
                 source={require('@/assets/images/school.png')} 
                 style={{
@@ -44,7 +53,39 @@ export default function Index() {
               />
               <Text className="text-center font-barlow-semibold text-[#0d0d59] text-xs">Mission & Vision</Text>
             </TouchableOpacity>
-            <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center pt-10" onPress={() => router.push("/bell")}>
+            <TouchableOpacity 
+              className="w-24 h-min mx-3 my-3 justify-center pt-5"
+              onPress={() => router.push("/calender")}
+            >
+              <Image 
+                source={require('@/assets/images/calender.png')} 
+                style={{
+                  tintColor: '#0d0d59'
+                }} 
+                className="size-14 self-center"
+              />
+              <Text className="text-center font-barlow-semibold text-[#0d0d59] text-xs">Calendar</Text>
+            </TouchableOpacity>
+            <TouchableOpacity 
+              className="w-24 h-min mx-3 my-3 justify-center pt-5"
+              onPress={() => router.push("/news")}
+            >
+              <Image 
+                source={require('@/assets/images/news.png')} 
+                style={{
+                  tintColor: '#0d0d59'
+                }} 
+                className="size-14 self-center"
+              />
+              <Text className="text-center font-barlow-semibold text-[#0d0d59] text-xs">News</Text>
+            </TouchableOpacity>
+
+
+
+
+
+
+            <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center" onPress={() => router.push("/bell")}>
               <Image 
                 source={require('@/assets/images/bell.png')} 
                 style={{
@@ -54,7 +95,7 @@ export default function Index() {
               />
               <Text className="text-center font-barlow-semibold text-[#0d0d59] text-xs">Bell Schedule</Text>
             </TouchableOpacity>
-            <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center pt-10" onPress={() => router.push("/map")}>
+            <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center" onPress={() => router.push("/map")}>
               <Image 
                 source={require('@/assets/images/map-icon.png')} 
                 style={{
@@ -64,11 +105,6 @@ export default function Index() {
               />
               <Text className="text-center font-barlow-semibold text-[#0d0d59] text-xs">Campus Map</Text>
             </TouchableOpacity>
-
-
-
-
-
             <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center" onPress={() => router.push("/contacts")}>
               <Image 
                 source={require('@/assets/images/phone.png')} 
@@ -79,7 +115,16 @@ export default function Index() {
               />
               <Text className="text-center font-barlow-semibold text-[#0d0d59] text-xs">Contacts</Text>
             </TouchableOpacity>
-            <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center">
+
+
+
+
+
+
+            <TouchableOpacity 
+              className="w-24 h-min mx-3 my-3 justify-center"
+              onPress={() => router.push("/student")}
+            >
               <Image 
                 source={require('@/assets/images/user.png')} 
                 style={{
@@ -91,7 +136,7 @@ export default function Index() {
             </TouchableOpacity>
             <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center">
               <Image 
-                source={require('@/assets/images/user.png')} 
+                source={require('@/assets/images/registrar.png')} 
                 style={{
                   tintColor: '#0d0d59'
                 }} 
@@ -99,10 +144,6 @@ export default function Index() {
               />
               <Text className="text-center font-barlow-semibold text-[#0d0d59] text-xs">Registrar</Text>
             </TouchableOpacity>
-
-
-
-
             <TouchableOpacity 
               className="w-24 h-min mx-3 my-3 justify-center"
               onPress={() => {
@@ -118,11 +159,12 @@ export default function Index() {
               />
               <Text className="text-center font-barlow-semibold text-[#0d0d59] text-xs">Infinite Campus</Text>
             </TouchableOpacity>
+
+
+            
             <TouchableOpacity 
               className="w-24 h-min mx-3 my-3 justify-center"
-              onPress={() => {
-                Linking.openURL('https://hawaii.infinitecampus.org/campus/hawaii.jsp');
-              }}
+              onPress={() => router.push("/athletics")}
             >
               <Image 
                 source={require('@/assets/images/ball.png')} 
@@ -151,19 +193,10 @@ export default function Index() {
 
 
 
-            <TouchableOpacity 
-              className="w-24 h-min mx-3 my-3 justify-center"
-              onPress={() => router.push("/calender")}
-            >
-              <Image 
-                source={require('@/assets/images/calender.png')} 
-                style={{
-                  tintColor: '#0d0d59'
-                }} 
-                className="size-14 self-center"
-              />
-              <Text className="text-center font-barlow-semibold text-[#0d0d59] text-xs">Calendar</Text>
-            </TouchableOpacity>
+            
+
+
+
           </ImageBackground>   
           
         </ScrollView>

@@ -19,7 +19,7 @@ import {
 import { WebView } from 'react-native-webview';
 import type { WebView as WebViewType } from 'react-native-webview';
 
-const Contacts = () => {
+const News = () => {
 
     const webViewRef = useRef<WebViewType>(null);
   
@@ -49,15 +49,14 @@ const Contacts = () => {
 
     if (!fontsLoaded) {
         return (
-            <SafeAreaProvider className="flex-1 justify-center items-center bg-white">
-              <SafeAreaView className="flex-row bg-[#0d0d59] h-28 z-30 pt-28 w-full">
-                  <ActivityIndicator size="large" color="#0d0d59" />
-              </SafeAreaView>
-            </SafeAreaProvider>
+          <SafeAreaProvider className="flex-1 justify-center items-center bg-white">
+            <SafeAreaView className="flex-row bg-[#0d0d59] h-28 z-30 pt-28 w-full">
+              <ActivityIndicator size="large" color="#0d0d59" />
+            </SafeAreaView>
+          </SafeAreaProvider>
         );
     }
 
-  
   return (
     <SafeAreaProvider className="flex-col">
       <SafeAreaView className="flex-row bg-[#0d0d59] h-28 z-30 pt-28">
@@ -92,12 +91,12 @@ const Contacts = () => {
         )}
       
       <View className="grow justify-center items-center bg-white">
-        <View className="self-center items-center flex-row w-[100vw] h-[100vh] z-10">
+        <View className="w-[100vw] h-full z-10">
           <WebView
-            className='h-[50vh]'
+            className='h-[5vh]'
             ref={webViewRef}
             
-            source={{ uri: 'https://www.waipahuhigh.org/apps/staff/' }}
+            source={{ uri: 'https://www.waipahuhigh.org/apps/news/index.jsp?id=0' }}
             injectedJavaScript={`
                 setTimeout(() => {
                 const style = document.createElement('style');
@@ -128,4 +127,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default News;

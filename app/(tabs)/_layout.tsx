@@ -128,6 +128,40 @@ const _Layout = () => {
 
                 }}
             />
+            <Tabs.Screen
+                name="news"
+                
+                options={{
+                    title: 'News',
+                    href: null, // hides from tab bar
+                    headerShown: false,
+                    
+
+                }}
+            />
+            <Tabs.Screen
+                name="athletics"
+                
+                options={{
+                    title: 'Athletics',
+                    href: null, // hides from tab bar
+                    headerShown: false,
+                    
+
+                }}
+            />
+            <Tabs.Screen
+                name="student"
+                
+                options={{
+                    title: 'Student',
+                    href: null, // hides from tab bar
+                    headerShown: false,
+                    
+
+                }}
+            />
+            
         </Tabs>
     )
 }

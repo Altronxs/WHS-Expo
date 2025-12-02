@@ -66,7 +66,7 @@ const Calender = () => {
         </TouchableOpacity>
         <Text
           className="z-20 font-barlow-semibold text-white w-full bg-whs-gold text-center relative bottom-5"
-        >Breakfast & Lunch Menu
+        >Calendar SY 25-26
         </Text>
         <View className="self-center items-center flex-row w-full flex-1 z-10">
             <WebView

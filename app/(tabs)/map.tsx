@@ -26,7 +26,13 @@ const Map = () => {
     });
 
     if (!fontsLoaded) {
-        return null; // Or a loading indicator
+        return (
+            <SafeAreaProvider className="flex-1 justify-center items-center bg-white">
+                <SafeAreaView className="flex-row bg-[#0d0d59] h-28 z-30 pt-28 w-full">
+                    <ActivityIndicator size="large" color="#0d0d59" />
+                </SafeAreaView>
+            </SafeAreaProvider>
+        );
     }
 
     return (
