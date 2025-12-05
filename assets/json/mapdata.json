@@ -47,7 +47,10 @@
       ],
       "marker": [21.387107450565455, -157.994380732819],
       "iconNeed": false,
-      "markerText": "V"
+      "markerText": "V",
+      "layoutNeed": true,
+      "firstFloor": ["V101", "V102", "V103", "V104", "V105"],
+      "secondFloor": ["V201", "V202", "V203", "V204", "V205"]
     },
     {
       "name": "Library",
@@ -65,6 +68,7 @@
       "marker": [21.387718566164256, -157.99426404730215],
       "iconNeed": true,
       "iconName": "library"
+
     },
     {
       "name": "Cafeteria",
@@ -90,21 +94,34 @@
     {
       "name": "C-Building",
       "polygon": [
-        [21.38622666923236, -157.9937999869217],
-        [21.38611269141721, -157.9936077370719],
-        [21.38620252331685, -157.9935458254382],
-        [21.38624241983871, -157.993613411664],
-        [21.3865905166827, -157.9933799955167],
-        [21.38665768103139, -157.9934979278403],
-        [21.38678912565227, -157.9934126387183],
-        [21.38711838790282, -157.9940308602451],
-        [21.38697831635067, -157.9941190479372],
-        [21.38665163418963, -157.9935185329622],
-        [21.38622666923236, -157.9937999869217]
+        [21.38712094585726, -157.9940356564532],
+        [21.38699372727332, -157.9941185376685],
+        [21.3866626699193, -157.9935377079513],
+        [21.38679170826479, -157.993459974228],
+        [21.38712094585726, -157.9940356564532]
       ],
       "marker": [21.386884303987546, -157.99379665548923],
       "iconNeed": false,
-      "markerText": "C"
+      "markerText": "C",
+      "layoutNeed": true,
+      "firstFloor": ["C1", "C2", "C3"]
+    },
+    {
+      "name": "B-Building",
+      "polygon": [
+        [21.38620730888306, -157.9937991314911],
+        [21.38609439508078, -157.993601713161],
+        [21.38619039666321, -157.9935361920597],
+        [21.38622890773961, -157.9936041497445],
+        [21.38657347405379, -157.9933763432463],
+        [21.38665283209846, -157.9935147557918],
+        [21.38620730888306, -157.9937991314911]
+      ],
+      "marker": [21.38640420093374, -157.99359840129497], 
+      "iconNeed": false,
+      "markerText": "B",
+      "layoutNeed": true,
+      "firstFloor": ["B2", "B1"]
     },
     {
       "name": "U-Building",
@@ -117,7 +134,10 @@
       ],
       "marker": [21.387495601292766, -157.99396312665496],
       "iconNeed": false,
-      "markerText": "U"
+      "markerText": "U",
+      "layoutNeed": true,
+      "firstFloor": ["U101A", "U101B", "U102A", "U102B"],
+      "secondFloor": ["U206", "U205", "U204", "U203", "U202", "U201"]
     },
     {
       "name": "Band & Chorus",
@@ -199,7 +219,9 @@
       ],
       "marker": [21.388860944277894, -157.99406446064722],
       "iconNeed": true,
-      "iconName": "whs"
+      "iconName": "whs",
+      "layoutNeed": true,
+      "firstFloor": ["Counselor", "Admin", "Health Room"]
     },
     {
       "name": "E-Building",
@@ -212,7 +234,10 @@
       ],
       "marker": [21.388619786713075, -157.99390476400455],
       "iconNeed": false,
-      "markerText": "E"
+      "markerText": "E",
+      "layoutNeed": true,
+      "firstFloor": ["E4", "E3", "E2", "E1"],
+      "secondFloor": ["E8", "E7", "E6", "E5"]
     },
     {
       "name": "",
@@ -223,7 +248,7 @@
         [21.38888094932379, -157.9938983043932],
         [21.3887724832858, -157.9939716987433]
       ],
-      "marker": [21.388619786713075, -157.99390476400455]
+      "marker": [0, 0]
     },
     {
       "name": "F-Building",
@@ -244,7 +269,10 @@
       ],
       "marker": [21.38834240735818, -157.99338779727321],
       "iconNeed": false,
-      "markerText": "F"
+      "markerText": "F",
+      "layoutNeed": true,
+      "firstFloor": ["F6", "F5", "F4", "F3", "F2", "F1"],
+      "secondFloor": ["F12", "F11", "F10", "F9", "F8", "F7"]
     },
     {
     "name": "G-Building",
@@ -257,7 +285,10 @@
     ],
     "marker": [21.38901568392057, -157.99355739026282],
     "iconNeed": false,
-    "markerText": "G"
+    "markerText": "G",
+      "layoutNeed": true,
+      "secondFloor": ["G5", "G6", "G7", "G8", "G9"],
+      "firstFloor": ["G104", "G103", "G102", "G101", "SG"]
   },
   {
     "name": "H-Building",
@@ -274,7 +305,10 @@
     ],
     "marker": [21.388921311417853, -157.99328526415934],
     "iconNeed": false,
-    "markerText": "H"
+    "markerText": "H",
+    "layoutNeed": true,
+    "secondFloor": ["H6", "H7", "H8", "H9", "H10"],
+    "firstFloor": ["H1", "H2", "H3", "H4", "H5"]
   },
   {
     "name": "P-28",
@@ -329,7 +363,10 @@
     ],
     "marker": [21.389727440416998, -157.9934377433773],
     "iconNeed": false,
-    "markerText": "I"
+    "markerText": "I",
+    "layoutNeed": true,
+    "firstFloor": ["I6", "I5", "I4", "I3", "I2", "I1"],
+    "secondFloor": ["I7", "I8", "I9", "I10", "I11", "I12"]
   },
   {
     "name": "J-Building",
@@ -346,7 +383,10 @@
     ],
     "marker": [21.38946216736426, -157.99294259643239],
     "iconNeed": false,
-    "markerText": "J"
+    "markerText": "J",
+    "layoutNeed": true,
+    "firstFloor": ["J4", "J3", "J2", "J1"],
+    "secondFloor": ["J9", "J8", "J7", "J6", "J5"]
   },
   {
     "name": "Q-Building",
@@ -363,7 +403,10 @@
     ],
     "marker": [21.38860786587649, -157.99308080337119],
     "iconNeed": false,
-    "markerText": "Q"
+    "markerText": "Q",
+    "layoutNeed": true,
+    "firstFloor": ["Q101", "Q102", "Q103", "Q104", "Q105", "Q106"],
+    "secondFloor": ["Q201", "Q202", "Q203", "Q204", "Q205", "Q206"]
   },
   {
     "name": "W-Building",
@@ -382,7 +425,11 @@
     ],
     "marker": [21.389141733789593, -157.99250484934936],
     "iconNeed": false,
-    "markerText": "W"
+    "markerText": "W",
+    "layoutNeed": true,
+    "firstFloor": ["W106", "W105", "W104", "W103", "W102", "W101"],
+    "secondFloor": ["W204", "W203", "W202", "W201"],
+    "thirdFloor": ["Culinary"]
   },
   {
     "name": "Gym",
@@ -503,7 +550,9 @@
     ],
     "marker": [21.39042393303519, -157.99251946035696],
     "iconNeed": false,
-    "markerText": "T"
+    "markerText": "T",
+    "layoutNeed": true,
+    "firstFloor": ["T1", "T2", "T3", "T4"]
   },
   {
     "name": "Student Government",
