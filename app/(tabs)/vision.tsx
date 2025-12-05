@@ -5,6 +5,7 @@ import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/
 import { NotoSerif_400Regular, NotoSerif_700Bold, NotoSerif_700Bold_Italic } from '@expo-google-fonts/noto-serif';
 import { BarlowSemiCondensed_400Regular, BarlowSemiCondensed_400Regular_Italic, BarlowSemiCondensed_600SemiBold } from '@expo-google-fonts/barlow-semi-condensed';
 import { SourceSerifPro_400Regular, SourceSerifPro_400Regular_Italic, SourceSerifPro_600SemiBold, SourceSerifPro_700Bold, SourceSerifPro_700Bold_Italic } from '@expo-google-fonts/source-serif-pro';
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useRouter } from "expo-router";
 import { WebView } from "react-native-webview";
