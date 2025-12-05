@@ -148,7 +148,7 @@ const Map = () => {
                     mapData.mapData.map((feature, index) => (
                         <React.Fragment key={index}>
                         <Polygon
-                            fillColor="#00008088"
+                            fillColor="#00008025"
                             strokeWidth={1}
                             coordinates={feature.polygon.map(coord => ({
                             latitude: coord[0],
@@ -174,18 +174,18 @@ const Map = () => {
                             {feature.iconNeed ? (
                                 <>
                                 {feature.textNeed && (
-                                    <Text className="text-center justify-center self-center text-[#FDD017] font-barlow-semibold text-base">
+                                    <Text className="text-center justify-center self-center text-[#007AFF] font-barlow-semibold text-base">
                                     {feature.markerText}
                                     </Text>
                                 )}
                                 <Image
                                     source={icons[feature.iconName as keyof typeof icons]}
-                                    style={{ width: 20, height: 20, tintColor: '#FDD017' }}
+                                    style={{ width: 20, height: 20, tintColor: '#007AFF' }}
                                     resizeMode="contain"
                                 />
                                 </>
                             ) : (
-                                <Text className="text-center justify-center self-center text-[#FDD017] font-barlow-semibold text-base">
+                                <Text className="text-center justify-center self-center text-[#007AFF] font-barlow-semibold text-base">
                                 {feature.markerText}
                                 </Text>
                             )}
