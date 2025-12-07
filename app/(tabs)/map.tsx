@@ -295,7 +295,7 @@ const Map = () => {
                                                 key={idx}
                                                 className={`
                                                 text-gray-700 text-[0.5rem] text-center
-                                                text-nowrap border-2 border-black self-center pt-2 pb-2 pl-1 pr-1 bg-gray-300
+                                                text-nowrap border-2 border-black self-center pt-2 pb-2 pl-1 pr-1 bg-gray-200
                                                 `}
                                                 style={{
                                                 width:
