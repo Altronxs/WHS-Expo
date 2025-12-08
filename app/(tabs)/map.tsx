@@ -156,7 +156,7 @@ const Map = () => {
                             minCenterCoordinateDistance: 100
                         }
                     }
-                    mapType="satelliteFlyover"
+                    mapType="standard"
                     userInterfaceStyle="dark"
                     >
                     
@@ -187,23 +187,23 @@ const Map = () => {
                             }}
                             >
                             <View
-                                className="bg-white/80 p-1 items-center rounded-full"
+                                className="items-center "
                             >
                                 {feature.iconNeed ? (
                                     <>
                                         {feature.textNeed && ( 
-                                            <Text className="text-center justify-center self-center text-[#000000] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] font-barlow-semibold text-base">
+                                            <Text className="text-center justify-center self-center text-[#ffffff] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] font-barlow-semibold text-base">
                                                 {feature.markerText}
                                             </Text>
                                         )}
                                         <Image
                                             source={icons[feature.iconName as keyof typeof icons]}
-                                            style={{ width: 15, height: 15, tintColor: '#000000' }}
+                                            style={{ width: 15, height: 15, tintColor: '#ffffff' }}
                                             resizeMode="contain"
                                         />
                                     </>
                                 ) : (
-                                    <Text className="text-center justify-center self-center text-[#000000] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] font-barlow-semibold text-base">
+                                    <Text className="text-center justify-center self-center text-[#ffffff] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] font-barlow-semibold text-base">
                                         {feature.markerText}
                                     </Text>
                                 )}

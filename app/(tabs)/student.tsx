@@ -1,4 +1,4 @@
-import { Text, Image, View, ScrollView, ImageBackground, ActivityIndicator, Dimensions, TouchableOpacity, StyleSheet } from "react-native";
+import { Text, Image, View, ScrollView, ImageBackground, ActivityIndicator, Dimensions, TouchableOpacity, StyleSheet, Linking } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { useFocusEffect } from 'expo-router';
 import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
@@ -103,15 +103,40 @@ const Students = () => {
                             Welcome to the Student page where students are provided with important resources to help navigate through Waipahu High School life.
                         </Text>
 
-                        <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center pt-5" onPress={() => router.push("/vision")}>
+                        <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center">
                             <Image 
-                                source={require('@/assets/images/school.png')} 
-                                style={{
+                            source={require('@/assets/images/registrar.png')} 
+                            style={{
                                 tintColor: '#0d0d59'
+                            }} 
+                            className="size-14 self-center"
+                            />
+                            <Text className="text-center font-barlow-semibold text-[#0d0d59] text-xs">Registrar</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity 
+                            className="w-24 h-min mx-3 my-3 justify-center"
+                            onPress={() => {
+                                Linking.openURL('https://hawaii.infinitecampus.org/campus/hawaii.jsp');
+                            }}
+                        >
+                            <Image 
+                                source={require('@/assets/images/if.png')} 
+                                style={{
+                                    tintColor: '#0d0d59'
                                 }} 
                                 className="size-14 self-center"
                             />
-                            <Text className="text-center font-barlow-semibold text-[#0d0d59] text-xs">Mission & Vision</Text>
+                            <Text className="text-center font-barlow-semibold text-[#0d0d59] text-xs">Infinite Campus</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center" onPress={() => router.push("/bell")}>
+                            <Image 
+                                source={require('@/assets/images/bell.png')} 
+                                style={{
+                                    tintColor: '#0d0d59'
+                                }} 
+                                className="size-14 self-center"
+                            />
+                            <Text className="text-center font-barlow-semibold text-[#0d0d59] text-xs">Bell Schedule</Text>
                         </TouchableOpacity>
                         <TouchableOpacity 
                         className="w-24 h-min mx-3 my-3 justify-center pt-5"
@@ -120,7 +145,7 @@ const Students = () => {
                             <Image 
                                 source={require('@/assets/images/calender.png')} 
                                 style={{
-                                tintColor: '#0d0d59'
+                                    tintColor: '#0d0d59'
                                 }} 
                                 className="size-14 self-center"
                             />
@@ -133,7 +158,7 @@ const Students = () => {
                             <Image 
                                 source={require('@/assets/images/news.png')} 
                                 style={{
-                                tintColor: '#0d0d59'
+                                    tintColor: '#0d0d59'
                                 }} 
                                 className="size-14 self-center"
                             />

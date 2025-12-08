@@ -35,8 +35,9 @@ const Cafe = () => {
       "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"
     ];
     const formattedMonth = monthNames[month]; 
-    const pdfUrl = `https://www.waipahuhigh.org/menus/MONTHLY%20%20MENU%20${formattedMonth}-${year}.pdf`;
+    const pdfUrl = `https://www.waipahuhigh.org/pdf/MONTHLY%20%20MENU%20${formattedMonth}-${year}.pdf`;
     setMenuUrl(pdfUrl);
+    console.log(pdfUrl)
   }, []);
 
   if (!fontsLoaded || !menuUrl) {

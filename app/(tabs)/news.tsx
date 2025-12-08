@@ -16,11 +16,12 @@ import { useFonts } from '@expo-google-fonts/barlow-semi-condensed/useFonts';
 import {
   BarlowSemiCondensed_600SemiBold,
 } from '@expo-google-fonts/barlow-semi-condensed';
+import { Link, useRouter } from "expo-router";
 import { WebView } from 'react-native-webview';
 import type { WebView as WebViewType } from 'react-native-webview';
 
 const News = () => {
-
+    const router = useRouter();
     const webViewRef = useRef<WebViewType>(null);
   
     useFocusEffect(
@@ -71,10 +72,10 @@ const News = () => {
         </SafeAreaView>
       </SafeAreaView>
       
-      {canGoBack && (
-        <View className='bg-whs-gold w-[100vw] h-[8vh] flex-row'>
+      {canGoBack ? (
+        <View className='justify-center items-center bg-whs-gold'>
           <TouchableOpacity 
-            className="w-10 h-10  justify-center p-6"
+            className="w-10 h-10 left self-start pt-3 z-30"
             onPress={() => webViewRef.current?.goBack()}
           >
             <Image 
@@ -86,8 +87,30 @@ const News = () => {
             />
             
           </TouchableOpacity>
-            <Text className='text-whs-blue z-40 font-barlow-semibold mt-3 right-2'>Back</Text>
+          <Text
+              className="z-20 font-barlow-semibold text-white w-full bg-whs-gold text-center relative bottom-5"
+          >Mission, Vision, & Beliefs
+          </Text>
         </View>
+        ) : (
+          <View className="justify-center items-center bg-whs-gold ">
+              <TouchableOpacity 
+                  className="w-10 h-10 left self-start pt-3 z-30"
+                  onPress={() => router.push("/")}
+              >
+                  <Image 
+                  source={require('@/assets/images/back.png')} 
+                  style={{
+                      tintColor: '#0d0d59'
+                  }} 
+                  className="size-10 self-center"
+                  />
+              </TouchableOpacity>
+              <Text
+                  className="z-20 font-barlow-semibold text-white w-full bg-whs-gold text-center relative bottom-5"
+              >Mission, Vision, & Beliefs
+              </Text>
+          </View>
         )}
       
       <View className="grow justify-center items-center bg-white">
