@@ -134,7 +134,10 @@ export default function Index() {
               />
               <Text className="text-center font-barlow-semibold text-[#0d0d59] text-xs">Student</Text>
             </TouchableOpacity>
-            <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center">
+            <TouchableOpacity 
+              className="w-24 h-min mx-3 my-3 justify-center"
+              onPress={() => router.push("/registrar")}
+            >
               <Image 
                 source={require('@/assets/images/registrar.png')} 
                 style={{

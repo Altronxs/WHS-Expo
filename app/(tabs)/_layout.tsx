@@ -172,6 +172,17 @@ const _Layout = () => {
 
                 }}
             />
+            <Tabs.Screen
+                name="registrar"
+                
+                options={{
+                    title: 'Registrar',
+                    href: null, // hides from tab bar
+                    headerShown: false,
+                    
+
+                }}
+            />
             
         </Tabs>
     )

@@ -103,7 +103,10 @@ const Students = () => {
                             Welcome to the Student page where students are provided with important resources to help navigate through Waipahu High School life.
                         </Text>
 
-                        <TouchableOpacity className="w-24 h-min mx-3 my-3 justify-center">
+                        <TouchableOpacity 
+                            className="w-24 h-min mx-3 my-3 justify-center"
+                            onPress={() => router.push("/registrar")}
+                        >
                             <Image 
                             source={require('@/assets/images/registrar.png')} 
                             style={{

@@ -2,13 +2,13 @@
     "clubData": [
         {
             "name": "National Technical Honor Society",
-            "location": "V202",
+            "location": "V-202",
             "supervisor": "Cindy Takara",
             "description": "The NTHS mission is to honor student achievement and leadership, promote educational excellence, and build a highly skilled workforce by connecting education and industry. Its guiding principles, the Core Four Objectives, are career development, leadership, service, and recognition."
         },
         {
             "name": "National Honor Society",
-            "location": "H5",
+            "location": "H-5",
             "supervisor": "Edmar Ramos",
             "description": "Unveiled over a century ago, the National Honor Society enshrines four pillars at its heart: Scholarship, Service, Leadership, and Character. More than mere badges of honor for NHS members, these principles are transformative keys that unlock potential, enhancing every student's educational journey, and ultimately empowering them to make profound, enduring contributions to our world."
         },
@@ -20,7 +20,7 @@
         },
         {
             "name": "Academy of Engineering",
-            "location": "",
+            "location": "V-203",
             "supervisor": "C. Burdick",
             "description": "The Academy of Engineering provides students with hands-on experience in engineering principles, design thinking, and problem-solving. Students explore various engineering disciplines and work on projects that apply STEM concepts to real-world challenges."
         },
@@ -38,7 +38,7 @@
         },
         {
             "name": "Band",
-            "location": "",
+            "location": "Band",
             "supervisor": "H. Fu",
             "description": "The school band program offers students the opportunity to develop musical skills through instrumental performance. Members rehearse and perform at school events, competitions, and concerts while building teamwork and discipline through music."
         },
@@ -50,7 +50,7 @@
         },
         {
             "name": "Chess Club",
-            "location": "",
+            "location": "H-5",
             "supervisor": "J. Kahalewai",
             "description": "Chess Club brings together students who enjoy the strategic challenge of chess. Members improve their skills through practice, compete in tournaments, and learn critical thinking, patience, and strategic planning through the game."
         },
@@ -62,38 +62,38 @@
         },
         {
             "name": "Class of 2026 Council",
-            "location": "",
+            "location": "I-6",
             "supervisor": "E. Hipolito",
             "description": "The Class of 2026 Council represents the junior class, organizing class activities, fundraisers, and events. Council members work together to build class spirit and create memorable experiences for their classmates."
         },
         {
             "name": "Class of 2027 Council",
-            "location": "",
+            "location": "P-32",
             "supervisor": "K. Sledge",
             "description": "The Class of 2027 Council represents the sophomore class, planning events and activities that promote class unity and school spirit. Members develop leadership skills while organizing fundraisers and social events for their class."
         },
         {
             "name": "Class of 2028 Council",
-            "location": "",
+            "location": "F-4",
             "supervisor": "S. Mizuuchi",
             "description": "The Class of 2028 Council represents the freshman class, helping new students transition to high school while organizing class activities and building community. Members work to create a positive experience for their classmates."
         },
         {
             "name": "Class of 2029 Council",
-            "location": "",
+            "location": "H-8",
             "supervisor": "J. Titoki",
             "description": "The Class of 2029 Council will represent the incoming freshman class, planning orientation activities, class events, and fundraisers. Council members help establish class identity and create a welcoming environment for new students."
         },
         {
             "name": "FCCLA",
-            "location": "",
+            "location": "I-1",
             "supervisor": "J. Bajet / J. Reyes",
             "description": "Family, Career and Community Leaders of America (FCCLA) focuses on family and consumer sciences education. Members develop leadership skills, explore career pathways, and participate in competitive events while addressing real-world issues affecting families and communities."
         },
         {
             "name": "FCCLA - Culinary",
-            "location": "",
-            "supervisor": "",
+            "location": "I-1",
+            "supervisor": "J. Bajet",
             "description": "FCCLA Culinary focuses specifically on culinary arts within the FCCLA framework. Students develop cooking skills, food safety knowledge, and hospitality industry expertise while competing in culinary competitions and events."
         },
         {
@@ -140,7 +140,7 @@
         },
         {
             "name": "Japanese Club",
-            "location": "",
+            "location": "J-4",
             "supervisor": "T. Harris",
             "description": "Japanese Club celebrates Japanese language, culture, and traditions. Members practice language skills, learn about Japanese customs, celebrate cultural festivals, and explore various aspects of Japanese society and pop culture."
         },
@@ -158,7 +158,7 @@
         },
         {
             "name": "Leo Club",
-            "location": "",
+            "location": "H-1",
             "supervisor": "R. Odoya",
             "description": "Leo Club, sponsored by Lions Clubs International, empowers young people to serve their community and develop leadership skills. Members organize service projects, fundraisers, and community events while building friendships and making a difference."
         },
@@ -170,13 +170,13 @@
         },
         {
             "name": "Marauder Chess Club",
-            "location": "",
+            "location": "H-5",
             "supervisor": "J. Kahalewai",
             "description": "Marauder Chess Club offers students the opportunity to develop strategic thinking through chess. Members practice regularly, compete in tournaments, and improve their game while building analytical and problem-solving skills."
         },
         {
             "name": "Marauder eSports",
-            "location": "",
+            "location": "H-6",
             "supervisor": "K. Inafuku",
             "description": "Marauder eSports provides competitive gaming opportunities for students. Members compete in organized video game tournaments, develop teamwork and communication skills, and represent the school in esports competitions."
         },
@@ -230,7 +230,7 @@
         },
         {
             "name": "PAPI Club",
-            "location": "",
+            "location": "I-2",
             "supervisor": "M. Danreza",
             "description": "PAPI Club (Pacific Asian Pacific Islander) celebrates and promotes awareness of Pacific Islander and Asian cultures. Members share their heritage, organize cultural events, and create community among students of Pacific Islander and Asian descent."
         },
@@ -248,13 +248,13 @@
         },
         {
             "name": "Science Olympiad",
-            "location": "",
+            "location": "I-2",
             "supervisor": "Daproza/Garcia/Nakamoto",
             "description": "Science Olympiad is a national STEM competition where teams compete in various science disciplines. Members prepare for events covering topics from biology to engineering, developing deep knowledge and competitive skills in their chosen areas."
         },
         {
             "name": "Skills USA",
-            "location": "",
+            "location": "C1",
             "supervisor": "C. Talioaga",
             "description": "SkillsUSA is a partnership of students, teachers, and industry working together to ensure America has a skilled workforce. Members compete in career and technical skills competitions, develop professional skills, and connect education with career opportunities."
         },
