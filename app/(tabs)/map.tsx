@@ -48,6 +48,7 @@ const Map = () => {
     const [isSheetVisible, setIsSheetVisible] = useState(false);
 
     const [mapData, setMapData] = useState<MapDataResponse>(require('@/assets/json/mapdata.json'));
+    
     const icons = {
         gym: require('@/assets/images/gym.png'),
         marker: require('@/assets/images/map-marker.png'),

@@ -161,6 +161,17 @@ const _Layout = () => {
 
                 }}
             />
+            <Tabs.Screen
+                name="clubs"
+                
+                options={{
+                    title: 'Clubs',
+                    href: null, // hides from tab bar
+                    headerShown: false,
+                    
+
+                }}
+            />
             
         </Tabs>
     )
